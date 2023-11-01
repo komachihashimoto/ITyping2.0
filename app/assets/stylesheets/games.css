@@ -1,0 +1,249 @@
+body {
+  font-family: 'Itim', cursive;
+  overflow: hidden;
+  }
+
+  .text-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(30, 30, 30);
+  }
+
+  .text-container label {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .marker {
+  color: yellow;
+  }
+
+  .premarker {
+  color: white;
+  }
+
+  ::-webkit-scrollbar {
+  background-color: #530000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  border: 11px outset rgb(209, 209, 209);
+  }
+
+  .game-title {
+  font-size: 15vw;
+  color: #fff;
+  margin: 100px;
+  }
+
+  .buttons {
+  display: flex;
+  }
+
+  .details {
+  line-height: 1.7em;
+  position: relative;
+  margin: 2em auto 0;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 1em;
+  overflow-y: auto;
+  width: 60%; /* ボックス幅 */
+  background: #530000; /* ボックス背景色 */
+  color: #fff; /* 文章色 */
+  border: 8px solid #613a00; /* 枠線 */
+  border-radius: 3px; /* 角の丸み */
+  box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+  }
+
+
+  .details-headline {
+  font-size: 1.3em;
+  margin: 15px 0;
+  }
+
+  .details-text {
+  margin-left: 42px;
+  }
+
+  .start-button {
+  font-family: 'Itim', cursive;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #32323232;
+  border-radius: 50%;
+  line-height: 80px;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  border: #121212;
+  -webkit-box-shadow: 0 5px 0 #121212;
+  box-shadow: 0 5px 0 #121212;
+  margin: 10px;
+  }
+
+  .start-button:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 2px 0 #121212;
+  box-shadow: 0 2px 0 #121212;
+  }
+
+  .results {
+  font-size: 4vw;
+  line-height: 1.25em;
+  color: white;
+  position: relative;
+  padding: 0.7em;
+  width: 100%; /* ボックス幅 */
+  height: 60vh;
+  background: #ffffff; /* ボックス背景色 */
+  color: #0e0e0e; /* 文章色 */
+  border: 8px solid #848484; /* 枠線 */
+  border-radius: 3px; /* 角の丸み */
+  box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+  }
+
+  .results::before,
+  .results::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  }
+
+  .results::before {
+  width: 35px; 
+  right: 30px;
+  border: solid 4px #fc0000; /*ペン（赤色）*/
+  border-radius: 2px 2px 2px 2px;
+  }
+
+  .results::after {
+  width: 35px; 
+  right: 90px;
+  border: solid 4px #000000; /*ペン（黒色） */
+  border-radius: 2px 2px 2px 2%;
+  }
+
+  .replay-button {
+  font-family: 'Itim', cursive;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #32323232;
+  border-radius: 50%;
+  line-height: 80px;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  border: #121212;
+  -webkit-box-shadow: 0 5px 0 #121212;
+  box-shadow: 0 5px 0 #121212;
+  margin: 8vh;
+  }
+
+  .replay-button:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 2px 0 #121212;
+  box-shadow: 0 2px 0 #121212;
+  }
+
+  .menu-button {
+  font-family: 'Itim', cursive;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #32323232;
+  border-radius: 50%;
+  line-height: 140px;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  border: #121212;
+  -webkit-box-shadow: 0 5px 0 #121212;
+  box-shadow: 0 5px 0 #121212;
+  margin: 8vh;
+  }
+
+  .menu-button:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 2px 0 #121212;
+  box-shadow: 0 2px 0 #121212;
+  }
+
+  .text {
+  width: 100%;
+  border: none;
+  margin-top: 2rem;
+  font-size: 2vw;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: transparent;
+  background-color: transparent;
+  }
+  .text:focus, .text:focus-visible {
+  border: transparent;
+  outline: transparent;
+  }
+
+  .end-sentence {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 80vh;
+  }
+
+  .hidden {
+  display: none;
+  }
+
+  .question {
+  display:inline-flex;
+  position: relative;
+  margin: 2em auto;
+  font-weight: bold;
+  font-size: 5vw;
+  letter-spacing: 0.1em;
+  padding: 1.7em;
+  width: 60%; /* ボックス幅 */
+  background: #006633; /* ボックス背景色 */
+  color: #fff; /* 文章色 */
+  border: 8px solid #b2771f; /* 枠線 */
+  border-radius: 3px; /* 角の丸み */
+  box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+  }
+  .question::before,
+  .question::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  } 
+  .question::before {
+  width: 30px; 
+  right: 30px;
+  border: solid 3px #ffff00; /*チョーク（黄色）*/
+  border-radius: 5px 2px 0 2px;
+  }
+  .question::after {
+  width: 35px; 
+  right: 90px;
+  border: solid 3px #fff; /*チョーク（白） */
+  border-radius: 8px 5px 2px 5px;
+  }
+
+  .countdown {
+  font-size: 10em;
+  color: #fff;
+  }
