@@ -1,0 +1,11 @@
+<div class="text-container">
+  <h1 class="form-title">save your ranking!</h1>
+  <%= form_with model: @article, url:articles_path, local: true do |f| %>
+    <div class="rank-box">
+      記事を投稿する
+      <%= f.text_field :title, class:"nickname", placeholder:"nickname" %>
+      <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"country-select"}) %>
+      <%= f.submit "submit" ,class:"btn" %>
+    </div>
+  <% end %>
+</div>

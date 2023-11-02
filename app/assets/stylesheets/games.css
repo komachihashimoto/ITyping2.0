@@ -45,6 +45,12 @@ body {
   margin: 100px;
   }
 
+  .form-title {
+  font-size: 5vw;
+  color: #fff;
+
+  }
+
   .buttons {
   display: flex;
   }

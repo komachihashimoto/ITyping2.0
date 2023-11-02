@@ -57,6 +57,9 @@
                 <div id="accuracyLate" class="accuracy-late"></div>
                 <div id="score" class="game-score"></div>
             </div>
-            <button id="replayBtn" class="replay-button">menu</button>
+            <div class="buttons">
+              <button id="replayBtn" class="replay-button">menu</button>
+              <%= button_to "save", new_game_path, {method: :get, class: "save-button"} %>
+            </div>
         </div>
     </div>
