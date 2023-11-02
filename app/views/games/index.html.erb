@@ -1,0 +1,65 @@
+ <div class="audio">
+        <audio id="countSound" src="カウントダウン.mp3"></audio>
+        <audio id="lastCountSound" src="カウントダウンラスト.mp3"></audio>
+        <audio id="clearSound" src="クリア.mp3"></audio>
+        <audio id="typingSound" src="タイピング音.mp3"></audio>
+        <audio id="missSound" src="ミス.mp3"></audio>
+        <audio id="resultSound" src="リザルト.mp3"></audio>
+        <audio id="btnSound" src="各ボタン音.mp3"></audio>
+    </div>
+    <div id="startPage" class="text-container">
+        <h1 class="game-title">ITyping</h1>
+        <div class="buttons">
+            <button id="startBtn" class="start-button">start</button>
+            <button id="detailsBtn" class="start-button">details</button>
+        </div>
+    </div>
+    <div id="detailsPage" class="text-container hidden">
+        <div class="details">
+            <h1 class="details-headline">・About this game</h1>
+            <p class="details-text">This game was created by a boy who has been learning programming for two months. The rules of this game are simple. When the start button is pressed, a countdown begins. Once the game begins, the player is asked to enter 10 random IT-related words as quickly and accurately as possible. Once all the words are typed, the results screen appears, showing the time it took to complete the game, the number of spelling errors, WPM, accuracy, and score. The score is calculated as (WPM x accuracy). The benefits of playing this game are to improve your typing speed and accuracy, to learn more about IT terms, and to pass the time. Let's be careful not to get so absorbed in the game that we forget what we really need to do now. Joking aside, thank you for reading this long, long explanation. I did my best to write this text because I wanted to partially implement scrollbars and see how they actually appear. I would like to end with an explanation of the WPM that can be measured in this game.</p><br>
+            <h1 class="details-headline">・About WPM</h1>
+            <p class="details-text">Words Per Minute refers to the number of words typed per minute in English typing. Strictly speaking, however, it is a little different. Let us explain with an easy-to-understand example.<br><br>
+
+                1. I am good at piano<br>
+                2.You speak Japanese pretty well<br><br>
+                
+                Both 1 and 2 have 5 words, but the number of keys to input is 18 for 1 and 30 for 2.<br>
+                (*Not only alphabets, but also spaces, periods, commas, etc. are counted as one key.)<br><br>
+                
+                Thus, even if the number of words is the same, the number of keys to be entered may differ greatly. Therefore, regardless of the actual number of words entered, the five keys entered are calculated as one word.<br><br>
+                
+                So, if you can type 200 keys per minute, that is 40 wpm. 200 kpm = 40 wpm<br><br>
+                
+                It is important to remember that WPM is the standard for speed in English typing.</p>
+        </div>
+        <div id="backBtn" class="menu-button">menu</div>
+    </div>
+    <div id="countdown" class="text-container hidden">
+        <div id="second" class="countdown"></div>
+    </div>
+    <div id="game" class="text-container hidden">
+        <label for="inputText">
+            <div class="question">
+                <span id="entered" class="marker"></span>
+                <span id="remained" class="premarker"></span>
+            </div>
+            <input type="text" class="text" id="inputText" autofocus autocomplete="off" >
+        </label>
+    </div>
+
+    <div id="message" class="text-container hidden">
+        <div class="end-sentence">
+            <div class="results">
+                <div id="time" class="timer"></div>
+                <div id="miss" class="miss-count"></div>
+                <div id="WPM" class="words-per-minute"></div>
+                <div id="accuracyLate" class="accuracy-late"></div>
+                <div id="score" class="game-score"></div>
+            </div>
+            <div class="buttons">
+              <button id="replayBtn" class="replay-button">menu</button>
+              <%= button_to "save", new_game_path, {method: :get, class: "save-button"} %>
+            </div>
+        </div>
+    </div>
