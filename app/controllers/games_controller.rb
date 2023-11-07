@@ -9,8 +9,7 @@ class GamesController < ApplicationController
     if @rank.save
       redirect_to root_path
     else
-      render :new
-      puts @rank.errors.full_messages
+      render :index
     end
   end
 
