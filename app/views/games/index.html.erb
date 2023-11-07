@@ -1,17 +1,18 @@
  <div class="audio">
-        <audio id="countSound" src="カウントダウン.mp3"></audio>
-        <audio id="lastCountSound" src="カウントダウンラスト.mp3"></audio>
-        <audio id="clearSound" src="クリア.mp3"></audio>
-        <audio id="typingSound" src="タイピング音.mp3"></audio>
-        <audio id="missSound" src="ミス.mp3"></audio>
-        <audio id="resultSound" src="リザルト.mp3"></audio>
-        <audio id="btnSound" src="各ボタン音.mp3"></audio>
+        <audio id="countSound" src="<%= asset_path 'countdown.mp3' %>"></audio>
+        <audio id="lastCountSound" src="<%= asset_path 'countdownlast.mp3' %>"></audio>
+        <audio id="clearSound" src="<%= asset_path 'clear.mp3' %>"></audio>
+        <audio id="typingSound" src="<%= asset_path 'typing.mp3' %>"></audio>
+        <audio id="missSound" src="<%= asset_path 'miss.mp3' %>"></audio>
+        <audio id="resultSound" src="<%= asset_path 'result.mp3' %>"></audio>
+        <audio id="btnSound" src="<%= asset_path 'button.mp3' %>"></audio>
     </div>
     <div id="startPage" class="text-container">
         <h1 class="game-title">ITyping</h1>
         <div class="buttons">
             <button id="startBtn" class="start-button">start</button>
             <button id="detailsBtn" class="start-button">details</button>
+            <button id="rankBtn" class="start-button">ranking</button>
         </div>
     </div>
     <div id="detailsPage" class="text-container hidden">
@@ -59,7 +60,30 @@
             </div>
             <div class="buttons">
               <button id="replayBtn" class="replay-button">menu</button>
-              <%= button_to "save", new_game_path, {method: :get, class: "save-button"} %>
+              <button id="saveBtn" class= "replay-button">save</button>
             </div>
         </div>
+    </div>
+
+    <div id="formPage" class="text-container hidden">
+        <h1 class="form-title">information entry</h1>
+        <%= form_with model: @rank, url:games_path, local: true do |f| %>
+            <div class="rank-box">
+                <div class="forms">
+                    <%= f.text_field :nickname, value:"", class:"nickname", placeholder:"nickname" %>
+                    <%= f.text_field :score, value:"", class:"hidden", id:"gameScore" %>
+                    <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"country-select"}) %>
+                </div>
+                <%= f.submit "submit" , id:"submitBtn", class:"start-button" %>
+            </div>
+        <% end %>
+    </div>
+
+    <div id="rankPage" class="text-container hidden">
+        <div class="details">
+            <% @rank.each_with_index do |rank, index| %>
+            <p><%= index + 1 %>. <%= rank.nickname %> : <%= rank.score %> : <%= rank.country.name %></p>
+            <% end %>
+        </div>
+        <button id="menuBtn" class="menu-button">menu</button>
     </div>

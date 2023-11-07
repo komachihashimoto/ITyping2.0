@@ -31,7 +31,7 @@ body {
   }
 
   ::-webkit-scrollbar {
-  background-color: #530000;
+  background: rgba(0,0,0,0);
   }
 
   ::-webkit-scrollbar-thumb {
@@ -169,7 +169,7 @@ body {
   color: #fff;
   background-color: #32323232;
   border-radius: 50%;
-  line-height: 140px;
+  line-height: 150px;
   text-align: center;
   width: 150px;
   height: 150px;
@@ -252,4 +252,60 @@ body {
   .countdown {
   font-size: 10em;
   color: #fff;
+  }
+
+  .rank-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh ;
+  }
+
+  .nickname {
+  margin: 5vh;
+  width: 30vw;
+  height: 3vh;
+  padding: 2vh 3vw 2vh 0;
+  background-color: #006633;
+  border: none;
+  font-family: 'Itim', cursive;
+  color: #fff;
+  font-size: 5vh;
+
+  }
+
+  .country-select {
+  margin: 5vh;
+  padding: 2vh;
+  background-color: #006633;
+  border: none;
+  color: #fff;
+  font-family: 'Itim', cursive;
+  font-size: 5vh;
+  }
+
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Itim', cursive;
+    background-color: #fff;
+    background: #006633; /* ボックス背景色 */
+    color: #fff; /* 文章色 */
+    border: 8px solid #b2771f; /* 枠線 */
+    border-radius: 3px; /* 角の丸み */
+    box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+  }
+
+  .forms ::placeholder {
+    font-family: 'Itim', cursive;
+    color: #fff;
+    font-size: 5vh;
+  }
+
+
+  .forms :focus {
+    outline: none;
+    background-color: #006633;
+    color: #fff;
   }

@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_01_064915) do
   create_table "ranks", charset: "utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.integer "score", null: false
-    t.integer "country", null: false
+    t.integer "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

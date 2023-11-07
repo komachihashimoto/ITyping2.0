@@ -75,6 +75,8 @@
     const detailsBtn       = document.getElementById('detailsBtn');
     const startPage        = document.getElementById('startPage');
     const detailsPage      = document.getElementById('detailsPage');
+    const formPage         = document.getElementById('formPage');
+    const rankPage         = document.getElementById('rankPage');
     const timeElement      = document.getElementById('time');
     const countdownElement = document.getElementById('countdown');
     const second           = document.getElementById('second');
@@ -89,6 +91,10 @@
     const WPM              = document.getElementById('WPM');
     const accuracyLate     = document.getElementById('accuracyLate');
     const score            = document.getElementById('score');
+    const saveBtn          = document.getElementById('saveBtn');
+    const submitBtn        = document.getElementById('submitBtn');
+    const menuBtn          = document.getElementById('menuBtn');
+    const rankBtn          = document.getElementById('rankBtn');
 
     let remainedTextWords = remained.textContent.split('');
     let enteredTextWords  = [];
@@ -241,6 +247,7 @@
                         miss.textContent = `miss : ${missCount} `; //ミス数の表示
                         scoreCount = wpm * accuracy ; //スコアの計算
                         score.textContent = `score : ${Math.round(scoreCount)}`; //スコアの表示
+                        localStorage.setItem('point', scoreCount);  // スコアをlocalStorageに保存
                     }else{
                         playClear(); //サウンド再生
                         setQuestion(); // 新しい問題文をセット
@@ -262,12 +269,39 @@
         startPage.classList.add('hidden');
     });
 
+    //rankボタンが押された時の処理
+    rankBtn.addEventListener('click', () => {
+        playBtn(); //サウンド再生
+        rankPage.classList.remove('hidden');
+        startPage.classList.add('hidden');
+    });
+
     //menuボタンが押された時の処理
-    [backBtn, replayBtn].forEach(btn => {
+    [backBtn, replayBtn, menuBtn].forEach(btn => {
     btn.addEventListener('click', () => {
         playBtn(); //サウンド再生
         setTimeout(()=> {window.location.reload();
-        },300);
+        },200);
     });
     });
-    
+
+    //saveボタンが押された時の処理
+    saveBtn.addEventListener('click', () => {
+        playBtn(); //サウンド再生
+        formPage.classList.remove('hidden');
+        message.classList.add('hidden');
+        let point = localStorage.getItem('point');  // スコアをlocalStorageから取得
+            document.getElementById('gameScore').value = point;
+            localStorage.clear();
+        }
+    );
+
+    //submitボタンが押された時の処理
+    submitBtn.addEventListener('click', () => {
+        playBtn(); //サウンド再生
+        setTimeout(()=> {
+        window.location.reload();
+        rankPage.classList.remove('hidden');
+        startPage.classList.add('hidden');
+        },200);
+    });
