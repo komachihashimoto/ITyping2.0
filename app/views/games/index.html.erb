@@ -70,7 +70,7 @@
         <%= form_with model: @rank, url:games_path, local: true do |f| %>
             <div class="rank-box">
                 <div class="forms">
-                    <%= f.text_field :nickname, class:"nickname", placeholder:"nickname" %>
+                    <%= f.text_field :nickname, value:"", class:"nickname", placeholder:"nickname" %>
                     <%= f.text_field :score, value:"", class:"hidden", id:"gameScore" %>
                     <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"country-select"}) %>
                 </div>
