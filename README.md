@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## ranks
+
+| Column           | Type       | Options            |
+| ---------------- | ---------- | ------------------ |
+| nickname         | string     | null: false        |
+| score            | integer    | null: false        |
+| country_id       | integer    | null: false        |
