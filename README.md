@@ -1,32 +1,130 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
 
-Things you may want to cover:
+ITyping2.0
 
-* Ruby version
+## アプリケーション概要
 
-* System dependencies
+IT用語が主に出題されるタイピングゲーム
 
-* Configuration
+## URL
 
-* Database creation
+URL
 
-* Database initialization
+## 利用方法
 
-* How to run the test suite
+#### ゲーム内容
 
-* Services (job queues, cache servers, search engines, etc.)
+・ startボタンを押すとカウントダウンが始まります。
 
-* Deployment instructions
+・ カウントダウン終了後、ランダムで出題された単語を10個タイピングします。
 
-* ...
+・ ゲーム終了後、かかった時間(time)、打ち間違えた回数(miss)、一分当たりの入力単語数(WPM)、正確さ(accuracy)、得点(score)が表示されます。
 
-## ranks
+・ result画面でsaveボタンを押すことで、入力フォームが表示されます。
+
+・ 入力フォームには、nickname(半角英字)の入力とcountry(国)の選択をした状態でsubmitボタンを押すと、ranksテーブルに(nickname, country_id, score)が保存され、トップページに遷移します。
+
+・ menuボタンを押すと、トップページに戻ります。
+
+### detailについて
+
+・ トップページにあるdetail(詳細)ボタンを押すと、このゲームの説明文が書いてあるページが表示されます。
+
+・ menuボタンを押すと、トップページに戻ります。
+
+### rankingについて
+
+・ トップページにあるrankingボタンを押すと、ranking一覧が表示されます。
+
+・ rankingページには、scoreの値が高い順に上から並んでいます。
+
+・ プレイヤーの情報は左から順に、nickname,score,countryが表示されています。
+
+## このゲームを開発したきっかけ
+
+このゲームは、JavaScriptの理解を深めたいという思いから作成されました。
+
+使用フレームワークはRuby on Railsですが、ランキング機能の実装まではフレームワークを使用していませんでした。
+
+理由は三つあります。
+
+一つ目は、テーブルの必要性が無かったからです。
+
+ランキングの表示に必要な、プレイヤーの情報を格納するためにはテーブルが必要でした。ですが、出題単語の格納に関しては配列で十分だったからです。
+
+二つ目は、ファイルの数を少なくしたかったからです。
+
+ファイルの数が増えれば増えるほど、あとから見返したり手直しをする際に見るべき場所が増え、手間が生じるのを避けたかったからです。
+
+三つめは、レンタルサーバーの料金が安くなるからです。
+
+デプロイはrenderでしましたが、renderに限らずstatic site(静的webサイト)の場合は料金が安くなる傾向があるからです。また、このゲーム自体、重たい通信を必要としません。
+
+## 実装した機能等
+
+・ class "hidden" の付与による疑似的な画面遷移
+
+・ 入力前と後の文字を配列に入れ、つなげ合わせることによって入力後の文字の色を変える処理
+
+・ 架空の入力フォームを作り、localStorageを使用して入力させることでの情報の保存
+
+・ 効果音の付与
+
+## 実装予定の機能
+
+・ 難易度の選択
+
+## db設計
+
+### ranks
 
 | Column           | Type       | Options            |
 | ---------------- | ---------- | ------------------ |
 | nickname         | string     | null: false        |
 | score            | integer    | null: false        |
 | country_id       | integer    | null: false        |
+
+※テーブルが一つでアソシエーションがないため、ER図は省略します。
+
+## 画面遷移図
+
+図
+
+## 使用言語
+
+・ HTML
+
+・ CSS
+
+・ JavaScript
+
+・ Ruby
+
+### フレームワーク
+
+・ Ruby on Rails
+
+## ローカルでの動作方法
+
+方法
+
+## 工夫した点
+
+・ プレイしていて、きつく感じない程度の優しい効果音の選定
+
+・ 目に優しい背景色の選定
+
+・ 可愛らしさを表現するための背景デザインやフォントの選定
+
+・明確でわかりやすいボタンデザイン
+
+## 改善点
+
+改善するべき点は、画面にもっと動きをつけることです。
+
+anime.jsを使用して簡単に画面を動かせるそうなので、anime.jsについて勉強します。
+
+## 制作時間
+
+約1週間
