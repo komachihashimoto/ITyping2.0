@@ -102,6 +102,7 @@ body {
   transform: translate(0, 3px);
   -webkit-box-shadow: 0 2px 0 #121212;
   box-shadow: 0 2px 0 #121212;
+  transition: all 0.5s;
   }
 
   .results {
@@ -161,6 +162,7 @@ body {
   transform: translate(0, 3px);
   -webkit-box-shadow: 0 2px 0 #121212;
   box-shadow: 0 2px 0 #121212;
+  transition: all 0.5s;
   }
 
   .menu-button {
@@ -185,6 +187,7 @@ body {
   transform: translate(0, 3px);
   -webkit-box-shadow: 0 2px 0 #121212;
   box-shadow: 0 2px 0 #121212;
+  transition: all 0.5s;
   }
 
   .text {
