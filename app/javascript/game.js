@@ -175,7 +175,7 @@
 
      
         //配列questionからランダムで10個配列sentencesに代入
-        for(let i = 0; i < 2; i++){
+        for(let i = 0; i < 10; i++){
             let index = Math.floor(Math.random() * questions.length);
             sentences.push(questions[index]);
             questions.splice(index, 1);

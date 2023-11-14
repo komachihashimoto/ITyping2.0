@@ -9,7 +9,7 @@ IT用語が主に出題されるタイピングゲーム
 
 ## URL
 
-URL
+https://ityping2-0.onrender.com
 
 ## 利用方法
 
@@ -89,7 +89,29 @@ URL
 
 ## 画面遷移図
 
-図
+### トップ画面
+
+[![Image from Gyazo](https://i.gyazo.com/ba92c5b0316abe6706c7c33c2489b7cf.png)](https://gyazo.com/ba92c5b0316abe6706c7c33c2489b7cf)
+
+### 説明画面
+
+[![Image from Gyazo](https://i.gyazo.com/baa95a9fbf33512a361ef4348d1a4405.png)](https://gyazo.com/baa95a9fbf33512a361ef4348d1a4405)
+
+### ゲーム画面
+
+[![Image from Gyazo](https://i.gyazo.com/4758b9774249f411bcd718ded621a319.png)](https://gyazo.com/4758b9774249f411bcd718ded621a319)
+
+### リザルト画面
+
+[![Image from Gyazo](https://i.gyazo.com/45601c4aaf581a100f5f1151a1d440af.png)](https://gyazo.com/45601c4aaf581a100f5f1151a1d440af)
+
+### ランキング登録画面
+
+[![Image from Gyazo](https://i.gyazo.com/81b2453af8fe1642fc35743421854f11.png)](https://gyazo.com/81b2453af8fe1642fc35743421854f11)
+
+### ランキング表示画面
+
+[![Image from Gyazo](https://i.gyazo.com/98ec5552086d6162f10a84ab573e17dd.png)](https://gyazo.com/98ec5552086d6162f10a84ab573e17dd)
 
 ## 使用言語
 
