@@ -95,6 +95,7 @@ body {
   -webkit-box-shadow: 0 5px 0 #121212;
   box-shadow: 0 5px 0 #121212;
   margin: 10px;
+  transition: all 0.4s;
   }
 
   .start-button:hover {
@@ -102,7 +103,7 @@ body {
   transform: translate(0, 3px);
   -webkit-box-shadow: 0 2px 0 #121212;
   box-shadow: 0 2px 0 #121212;
-  transition: all 0.5s;
+  transition: all 0.4s;
   }
 
   .results {
@@ -155,6 +156,7 @@ body {
   -webkit-box-shadow: 0 5px 0 #121212;
   box-shadow: 0 5px 0 #121212;
   margin: 8vh;
+  transition: all 0.4s;
   }
 
   .replay-button:hover {
@@ -162,7 +164,7 @@ body {
   transform: translate(0, 3px);
   -webkit-box-shadow: 0 2px 0 #121212;
   box-shadow: 0 2px 0 #121212;
-  transition: all 0.5s;
+  transition: all 0.4s;
   }
 
   .menu-button {
@@ -180,6 +182,7 @@ body {
   -webkit-box-shadow: 0 5px 0 #121212;
   box-shadow: 0 5px 0 #121212;
   margin: 8vh;
+  transition: all 0.4s;
   }
 
   .menu-button:hover {
@@ -187,7 +190,7 @@ body {
   transform: translate(0, 3px);
   -webkit-box-shadow: 0 2px 0 #121212;
   box-shadow: 0 2px 0 #121212;
-  transition: all 0.5s;
+  transition: all 0.4s;
   }
 
   .text {
