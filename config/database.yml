@@ -8,7 +8,7 @@ development:
   username: root
   password:
   host: localhost
-  database: ITyping2.0_development
+  database: ITyping2_0_development
 
 test:
   <<: *default

@@ -281,7 +281,7 @@
     btn.addEventListener('click', () => {
         playBtn(); //サウンド再生
         setTimeout(()=> {window.location.reload();
-        },200);
+        },300);
     });
     });
 
@@ -303,5 +303,5 @@
         window.location.reload();
         rankPage.classList.remove('hidden');
         startPage.classList.add('hidden');
-        },200);
+        },300);
     });
