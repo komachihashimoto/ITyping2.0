@@ -1,5 +1,9 @@
 'use strict';
 
+document.addEventListener('turbo:load', () => {
+    Turbo.session.drive = false;
+  });
+
     const questions = [
     "algorithm", "API", "application", "backup", "bandwidth", "binary", "bit", "byte", 
     "cache", "client", "cloud", "compiler", "compression", "cookie", "CPU", "database",
@@ -175,7 +179,7 @@
 
      
         //配列questionからランダムで10個配列sentencesに代入
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < 2; i++){
             let index = Math.floor(Math.random() * questions.length);
             sentences.push(questions[index]);
             questions.splice(index, 1);
@@ -299,9 +303,5 @@
     //submitボタンが押された時の処理
     submitBtn.addEventListener('click', () => {
         playBtn(); //サウンド再生
-        setTimeout(()=> {
-        window.location.reload();
-        rankPage.classList.remove('hidden');
-        startPage.classList.add('hidden');
-        },300);
     });
+
