@@ -1,15 +1,15 @@
 class GamesController < ApplicationController
   def index
-    @rank = Rank.new
     @rank = Rank.order(score: :desc)
   end
 
   def create
     @rank = Rank.new(rank_params)
     if @rank.save
-      redirect_to root_path
-    else
-      render :index
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js { render js: "window.location.reload();" }
+      end
     end
   end
 
