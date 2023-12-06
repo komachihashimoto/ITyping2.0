@@ -72,7 +72,7 @@ document.addEventListener('turbo:load', () => {
     const remained         = document.getElementById('remained');
     const inputText        = document.getElementById('inputText');
     const game             = document.getElementById('game');
-    const wordsCount       = document.getElementById('wordsCount');
+    const prg              = document.getElementById('prg');
     const message          = document.getElementById('message');
     const replayBtn        = document.getElementById('replayBtn');
     const startBtn         = document.getElementById('startBtn');
@@ -191,7 +191,7 @@ document.addEventListener('turbo:load', () => {
 
         // 問題数の表示を更新する関数
         const updateWordsCount = () => {
-            wordsCount.textContent = `${typedCount}/${wordsNum}`;
+            prg.value = `${(typedCount / wordsNum) * 100 }`;
         };
 
         // 新しい問題文をランダムにセットする関数
@@ -214,10 +214,10 @@ document.addEventListener('turbo:load', () => {
             // 「入力済み文字」「未入力文字」の配列の中身をリセット
             enteredTextWords = [];
             remainedTextWords = currentText.split('');
-            typedCount += 1;
             updateWordsCount();
+            typedCount += 1;
         };
-        updateWordsCount();
+
         setQuestion();
 
             //カウントスタート

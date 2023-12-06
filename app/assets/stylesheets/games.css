@@ -221,10 +221,36 @@ body {
   display: none;
   }
 
-  .words-count {
-    margin: 4vh;
-    color: #fff;
-    font-size: 3em;
+  .progress {
+  -webkit-appearance: none; 
+  margin: 3vh;
+  font-size: 2em;
+  width: 50%;
+  transition: all 0.3s;
+  }
+
+  progress::-webkit-progress-bar {
+  background-color: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.3s;
+  }
+
+  progress::-webkit-progress-value {
+  background-color: #006633;
+  transition: all 0.3s;
+  } 
+
+  progress::-moz-progress-bar {
+  background-color: #006633;
+  border-radius: 30px;
+  transition: all 0.3s;
+  }
+
+  progress::-ms-fill {
+  background-color: #006633;
+  border-radius: 30px;
+  transition: all 0.3s;
   }
 
   .question {
