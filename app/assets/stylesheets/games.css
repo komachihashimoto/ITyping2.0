@@ -221,10 +221,15 @@ body {
   display: none;
   }
 
+  .words-count {
+    margin: 4vh;
+    color: #fff;
+    font-size: 3em;
+  }
+
   .question {
   display:inline-flex;
   position: relative;
-  margin: 2em auto;
   font-weight: bold;
   font-size: 5vw;
   letter-spacing: 0.1em;
