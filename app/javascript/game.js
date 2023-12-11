@@ -165,7 +165,7 @@ document.addEventListener('turbo:load', () => {
         startPage.classList.add('hidden');
         let countdownTime = 3; // カウントダウンの時間（秒）
 
-        // カウントダウンを開始
+        // カウントダウンの開始
     countdown = setInterval(function() {
         if(countdownTime > 0) {
             if(Number.isInteger(countdownTime)) {
