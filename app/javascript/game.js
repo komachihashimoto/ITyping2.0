@@ -189,7 +189,7 @@ document.addEventListener('turbo:load', () => {
             wordsNum += 1;
         };
 
-        // 問題数の表示を更新する関数
+        // 問題数の表示の更新
         const updateWordsCount = () => {
             prg.value = `${(typedCount / wordsNum) * 100 }`;
         };
