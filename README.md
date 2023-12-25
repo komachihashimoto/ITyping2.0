@@ -94,7 +94,7 @@ https://ityping2-0.onrender.com
 
 ### 説明画面
 
-[![Image from Gyazo](https://i.gyazo.com/baa95a9fbf33512a361ef4348d1a4405.png)](https://gyazo.com/baa95a9fbf33512a361ef4348d1a4405)
+![f6b1bc4dc162bdcac1acade51c5fe7ff](https://github.com/komachihashimoto/ITyping2.0/assets/146046934/4ed06425-0eee-4f1b-8ff6-9a4a187c7df7)
 
 ### ゲーム画面
 
