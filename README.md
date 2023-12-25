@@ -1,11 +1,10 @@
-
 # アプリケーション名
 
 ITyping2.0
 
 ## アプリケーション概要
 
-IT用語が主に出題されるタイピングゲーム
+IT 用語が主に出題されるタイピングゲーム
 
 ## URL
 
@@ -15,37 +14,37 @@ https://ityping2-0.onrender.com
 
 #### ゲーム内容
 
-・ startボタンを押すとカウントダウンが始まります。
+・ start ボタンを押すとカウントダウンが始まります。
 
-・ カウントダウン終了後、ランダムで出題された単語を10個タイピングします。
+・ カウントダウン終了後、ランダムで出題された単語を 10 個タイピングします。
 
 ・ ゲーム終了後、かかった時間(time)、打ち間違えた回数(miss)、一分当たりの入力単語数(WPM)、正確さ(accuracy)、得点(score)が表示されます。
 
-・ result画面でsaveボタンを押すことで、入力フォームが表示されます。
+・ result 画面で save ボタンを押すことで、入力フォームが表示されます。
 
-・ 入力フォームには、nickname(半角英字)の入力とcountry(国)の選択をした状態でsubmitボタンを押すと、ranksテーブルに(nickname, country_id, score)が保存され、トップページに遷移します。
+・ 入力フォームには、nickname(半角英字)の入力と country(国)の選択をした状態で submit ボタンを押すと、ranks テーブルに(nickname, country_id, score)が保存され、トップページに遷移します。
 
-・ menuボタンを押すと、トップページに戻ります。
+・ menu ボタンを押すと、トップページに戻ります。
 
-### detailについて
+### detail について
 
-・ トップページにあるdetail(詳細)ボタンを押すと、このゲームの説明文が書いてあるページが表示されます。
+・ トップページにある detail(詳細)ボタンを押すと、このゲームの説明文が書いてあるページが表示されます。
 
-・ menuボタンを押すと、トップページに戻ります。
+・ menu ボタンを押すと、トップページに戻ります。
 
-### rankingについて
+### ranking について
 
-・ トップページにあるrankingボタンを押すと、ranking一覧が表示されます。
+・ トップページにある ranking ボタンを押すと、ranking 一覧が表示されます。
 
-・ rankingページには、scoreの値が高い順に上から並んでいます。
+・ ranking ページには、score の値が高い順に上から並んでいます。
 
-・ プレイヤーの情報は左から順に、nickname,score,countryが表示されています。
+・ プレイヤーの情報は左から順に、nickname,score,country が表示されています。
 
 ## このゲームを開発したきっかけ
 
-このゲームは、JavaScriptの理解を深めたいという思いから作成されました。
+このゲームは、JavaScript の理解を深めたいという思いから作成されました。
 
-使用フレームワークはRuby on Railsですが、ランキング機能の実装まではフレームワークを使用していませんでした。
+使用フレームワークは Ruby on Rails ですが、ランキング機能の実装まではフレームワークを使用していませんでした。
 
 理由は三つあります。
 
@@ -59,7 +58,7 @@ https://ityping2-0.onrender.com
 
 三つめは、レンタルサーバーの料金が安くなるからです。
 
-デプロイはrenderでしましたが、renderに限らずstatic site(静的webサイト)の場合は料金が安くなる傾向があるからです。また、このゲーム自体、重たい通信を必要としません。
+デプロイは render でしましたが、render に限らず static site(静的 web サイト)の場合は料金が安くなる傾向があるからです。また、このゲーム自体、重たい通信を必要としません。
 
 ## 実装した機能等
 
@@ -67,7 +66,7 @@ https://ityping2-0.onrender.com
 
 ・ 入力前と後の文字を配列に入れ、つなげ合わせることによって入力後の文字の色を変える処理
 
-・ 架空の入力フォームを作り、localStorageを使用して入力させることでの情報の保存
+・ 架空の入力フォームを作り、localStorage を使用して入力させることでの情報の保存
 
 ・ 効果音の付与
 
@@ -75,17 +74,17 @@ https://ityping2-0.onrender.com
 
 ・ 難易度の選択
 
-## db設計
+## db 設計
 
 ### ranks
 
-| Column           | Type       | Options            |
-| ---------------- | ---------- | ------------------ |
-| nickname         | string     | null: false        |
-| score            | integer    | null: false        |
-| country_id       | integer    | null: false        |
+| Column     | Type    | Options     |
+| ---------- | ------- | ----------- |
+| nickname   | string  | null: false |
+| score      | integer | null: false |
+| country_id | integer | null: false |
 
-※テーブルが一つでアソシエーションがないため、ER図は省略します。
+※テーブルが一つでアソシエーションがないため、ER 図は省略します。
 
 ## 画面遷移図
 
@@ -99,7 +98,7 @@ https://ityping2-0.onrender.com
 
 ### ゲーム画面
 
-[![42377894e5d345a3d8698556da3020e7](https://github.com/komachihashimoto/ITyping2.0/assets/146046934/e9deff4d-28fc-4b7d-9c47-b72b1c4cc891)
+![42377894e5d345a3d8698556da3020e7](https://github.com/komachihashimoto/ITyping2.0/assets/146046934/e9deff4d-28fc-4b7d-9c47-b72b1c4cc891)
 
 ### リザルト画面
 
@@ -141,8 +140,8 @@ https://ityping2-0.onrender.com
 
 改善するべき点は、画面にもっと動きをつけることです。
 
-anime.jsを使用して簡単に画面を動かせるそうなので、anime.jsについて勉強します。
+anime.js を使用して簡単に画面を動かせるそうなので、anime.js について勉強します。
 
 ## 制作時間
 
-約1週間
+約 1 週間
