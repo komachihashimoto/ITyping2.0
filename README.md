@@ -99,7 +99,7 @@ https://ityping2-0.onrender.com
 
 ### ゲーム画面
 
-[![Image from Gyazo](https://i.gyazo.com/4758b9774249f411bcd718ded621a319.png)](https://gyazo.com/4758b9774249f411bcd718ded621a319)
+[![42377894e5d345a3d8698556da3020e7](https://github.com/komachihashimoto/ITyping2.0/assets/146046934/e9deff4d-28fc-4b7d-9c47-b72b1c4cc891)
 
 ### リザルト画面
 
